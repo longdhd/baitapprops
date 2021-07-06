@@ -4,13 +4,14 @@ import Modal from "./Modal";
 export default class ProductList extends Component {
   
   state = {
-    carModal: {},
+    carModal:  { id: 1, name: 'black car', img: './images/products/black-car.jpg', price: 1000 },
   }
 
   xemChiTiet = (CAR) => {
     this.setState({
       carModal:CAR
     })
+    
   }
 
   render() {
@@ -26,8 +27,8 @@ export default class ProductList extends Component {
             className="btn btn-success"
             data-toggle="modal"
             data-target={`#myModal${car.id}`}
-            onClick = {() =>
-            {this.xemChiTiet(car);
+            onClick={()=>{
+              this.xemChiTiet(car);
             }}
           >
             Xem chi tiết

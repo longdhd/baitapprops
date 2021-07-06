@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
 export default class Modal extends Component {
-
   render() {
-    
-    let {product} = this.props;
-
+    let { product } = this.props;
+    console.log("check", product);
     return (
       <div>
         <div className="modal fade" id={`myModal${product.id}`}>
